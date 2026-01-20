@@ -17,23 +17,27 @@ const iconMap = {
 export function MainNav({ items, onNavigate, variant }: MainNavProps) {
   if (variant === 'bottom') {
     return (
-      <nav className="flex items-center justify-around bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 h-16 px-2">
+      <nav className="flex items-center justify-around bg-zinc-900 border-t border-zinc-800 h-16 px-2">
         {items.map((item) => {
           const Icon = iconMap[item.icon]
           return (
             <button
               key={item.href}
               onClick={() => onNavigate?.(item.href)}
-              className={`flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-lg transition-colors ${
+              className={`flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-lg transition-all ${
                 item.isActive
-                  ? 'text-lime-600 dark:text-lime-400'
-                  : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'
+                  ? 'text-lime-400'
+                  : 'text-zinc-500 hover:text-zinc-300'
               }`}
             >
-              <Icon
-                size={24}
-                strokeWidth={item.isActive ? 2.5 : 2}
-              />
+              <div className={`p-1.5 rounded-lg transition-colors ${
+                item.isActive ? 'bg-lime-500/20' : ''
+              }`}>
+                <Icon
+                  size={22}
+                  strokeWidth={item.isActive ? 2.5 : 2}
+                />
+              </div>
               <span className="text-xs font-medium font-['Inter']">
                 {item.label}
               </span>
@@ -46,7 +50,7 @@ export function MainNav({ items, onNavigate, variant }: MainNavProps) {
 
   // Sidebar variant
   return (
-    <nav className="flex-1 px-3 py-2">
+    <nav className="flex-1 px-3 py-4">
       <ul className="space-y-1">
         {items.map((item) => {
           const Icon = iconMap[item.icon]
@@ -54,17 +58,26 @@ export function MainNav({ items, onNavigate, variant }: MainNavProps) {
             <li key={item.href}>
               <button
                 onClick={() => onNavigate?.(item.href)}
-                className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors font-['Inter'] ${
+                className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl transition-all font-['Inter'] ${
                   item.isActive
-                    ? 'bg-lime-100 dark:bg-lime-900/30 text-lime-700 dark:text-lime-400'
-                    : 'text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-200'
+                    ? 'bg-lime-500/20 text-lime-400 border border-lime-500/30'
+                    : 'text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200'
                 }`}
               >
-                <Icon
-                  size={20}
-                  strokeWidth={item.isActive ? 2.5 : 2}
-                />
+                <div className={`p-2 rounded-lg ${
+                  item.isActive
+                    ? 'bg-lime-500/30'
+                    : 'bg-zinc-800'
+                }`}>
+                  <Icon
+                    size={18}
+                    strokeWidth={item.isActive ? 2.5 : 2}
+                  />
+                </div>
                 <span className="font-medium">{item.label}</span>
+                {item.isActive && (
+                  <div className="ml-auto w-2 h-2 rounded-full bg-lime-400" />
+                )}
               </button>
             </li>
           )

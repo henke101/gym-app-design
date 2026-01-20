@@ -37,7 +37,7 @@ export function UserMenu({ user, onLogout, variant }: UserMenuProps) {
       <div ref={menuRef} className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center justify-center w-9 h-9 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+          className="flex items-center justify-center w-9 h-9 rounded-full bg-lime-500/20 text-lime-400 hover:bg-lime-500/30 transition-colors ring-2 ring-lime-500/30"
         >
           {user.avatarUrl ? (
             <img
@@ -51,27 +51,27 @@ export function UserMenu({ user, onLogout, variant }: UserMenuProps) {
         </button>
 
         {isOpen && (
-          <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-zinc-900 rounded-lg shadow-lg border border-zinc-200 dark:border-zinc-800 py-1 z-50">
-            <div className="px-4 py-2 border-b border-zinc-200 dark:border-zinc-800">
-              <p className="font-medium text-zinc-900 dark:text-zinc-100 font-['Inter']">
+          <div className="absolute right-0 top-full mt-2 w-48 bg-zinc-800 rounded-xl shadow-lg border border-zinc-700 py-1 z-50">
+            <div className="px-4 py-2 border-b border-zinc-700">
+              <p className="font-medium text-zinc-100 font-['Inter']">
                 {user.name}
               </p>
             </div>
-            <button className="w-full flex items-center gap-3 px-4 py-2 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors font-['Inter']">
+            <button className="w-full flex items-center gap-3 px-4 py-2 text-zinc-300 hover:bg-zinc-700 hover:text-lime-400 transition-colors font-['Inter']">
               <User size={16} />
               <span>Profile</span>
             </button>
-            <button className="w-full flex items-center gap-3 px-4 py-2 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors font-['Inter']">
+            <button className="w-full flex items-center gap-3 px-4 py-2 text-zinc-300 hover:bg-zinc-700 hover:text-lime-400 transition-colors font-['Inter']">
               <Settings size={16} />
               <span>Settings</span>
             </button>
-            <div className="border-t border-zinc-200 dark:border-zinc-800 mt-1 pt-1">
+            <div className="border-t border-zinc-700 mt-1 pt-1">
               <button
                 onClick={() => {
                   setIsOpen(false)
                   onLogout?.()
                 }}
-                className="w-full flex items-center gap-3 px-4 py-2 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors font-['Inter']"
+                className="w-full flex items-center gap-3 px-4 py-2 text-amber-400 hover:bg-amber-500/20 transition-colors font-['Inter']"
               >
                 <LogOut size={16} />
                 <span>Logout</span>
@@ -88,9 +88,9 @@ export function UserMenu({ user, onLogout, variant }: UserMenuProps) {
     <div ref={menuRef} className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center gap-3 p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+        className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-zinc-800 transition-colors"
       >
-        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
+        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-lime-500/20 text-lime-400 ring-2 ring-lime-500/30">
           {user.avatarUrl ? (
             <img
               src={user.avatarUrl}
@@ -102,33 +102,33 @@ export function UserMenu({ user, onLogout, variant }: UserMenuProps) {
           )}
         </div>
         <div className="flex-1 text-left">
-          <p className="font-medium text-zinc-900 dark:text-zinc-100 font-['Inter'] truncate">
+          <p className="font-medium text-zinc-100 font-['Inter'] truncate">
             {user.name}
           </p>
         </div>
         <ChevronDown
           size={16}
-          className={`text-zinc-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`text-zinc-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 right-0 bottom-full mb-2 bg-white dark:bg-zinc-900 rounded-lg shadow-lg border border-zinc-200 dark:border-zinc-800 py-1 z-50">
-          <button className="w-full flex items-center gap-3 px-4 py-2 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors font-['Inter']">
+        <div className="absolute left-0 right-0 bottom-full mb-2 bg-zinc-800 rounded-xl shadow-lg border border-zinc-700 py-1 z-50">
+          <button className="w-full flex items-center gap-3 px-4 py-2 text-zinc-300 hover:bg-zinc-700 hover:text-lime-400 transition-colors font-['Inter']">
             <User size={16} />
             <span>Profile</span>
           </button>
-          <button className="w-full flex items-center gap-3 px-4 py-2 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors font-['Inter']">
+          <button className="w-full flex items-center gap-3 px-4 py-2 text-zinc-300 hover:bg-zinc-700 hover:text-lime-400 transition-colors font-['Inter']">
             <Settings size={16} />
             <span>Settings</span>
           </button>
-          <div className="border-t border-zinc-200 dark:border-zinc-800 mt-1 pt-1">
+          <div className="border-t border-zinc-700 mt-1 pt-1">
             <button
               onClick={() => {
                 setIsOpen(false)
                 onLogout?.()
               }}
-              className="w-full flex items-center gap-3 px-4 py-2 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors font-['Inter']"
+              className="w-full flex items-center gap-3 px-4 py-2 text-amber-400 hover:bg-amber-500/20 transition-colors font-['Inter']"
             >
               <LogOut size={16} />
               <span>Logout</span>
