@@ -1,0 +1,259 @@
+{
+  "_meta": {
+    "models": {
+      "dailyCheckIns": "Each daily check-in is a single day's log entry where you record your weight, workouts, and meals. You can edit any past entry at any time.",
+      "exercises": "Exercises are the specific activities performed during a workout, like Chest, Legs, or Cardio. Each can have optional details like sets, reps, weight, time, or distance.",
+      "meals": "Meals track your calorie intake across four slots: Breakfast, Lunch, Dinner, and Snacks. Each slot has an optional kcal value.",
+      "streak": "Your streak counts consecutive days of logging to keep you motivated."
+    },
+    "relationships": [
+      "Each DailyCheckIn contains an optional weight measurement",
+      "Each DailyCheckIn may contain a workout with one or more exercises",
+      "Each DailyCheckIn contains four meal slots (Breakfast, Lunch, Dinner, Snacks)",
+      "The streak is calculated from your logging history"
+    ]
+  },
+  "exerciseTypes": [
+    "Chest",
+    "Lower Back",
+    "Upper Back",
+    "Shoulders",
+    "Arms",
+    "Legs",
+    "Core",
+    "Cardio",
+    "Walking"
+  ],
+  "mealSlots": ["Breakfast", "Lunch", "Dinner", "Snacks"],
+  "streak": {
+    "currentStreak": 12,
+    "longestStreak": 21,
+    "lastLoggedDate": "2026-01-20"
+  },
+  "previousWeight": 185.2,
+  "dailyCheckIns": [
+    {
+      "id": "checkin-2026-01-20",
+      "date": "2026-01-20",
+      "weight": null,
+      "workout": {
+        "completed": true,
+        "exercises": [
+          {
+            "id": "ex-001",
+            "type": "Chest",
+            "sets": 4,
+            "reps": 10,
+            "weight": 185
+          },
+          {
+            "id": "ex-002",
+            "type": "Shoulders",
+            "sets": 3,
+            "reps": 12,
+            "weight": 45
+          },
+          {
+            "id": "ex-003",
+            "type": "Arms",
+            "sets": null,
+            "reps": null,
+            "weight": null
+          }
+        ]
+      },
+      "meals": {
+        "breakfast": 450,
+        "lunch": null,
+        "dinner": null,
+        "snacks": null
+      }
+    },
+    {
+      "id": "checkin-2026-01-19",
+      "date": "2026-01-19",
+      "weight": 185.2,
+      "workout": {
+        "completed": true,
+        "exercises": [
+          {
+            "id": "ex-004",
+            "type": "Legs",
+            "sets": 4,
+            "reps": 8,
+            "weight": 225
+          },
+          {
+            "id": "ex-005",
+            "type": "Core",
+            "sets": 3,
+            "reps": 15,
+            "weight": null
+          }
+        ]
+      },
+      "meals": {
+        "breakfast": 520,
+        "lunch": 680,
+        "dinner": 750,
+        "snacks": 200
+      }
+    },
+    {
+      "id": "checkin-2026-01-18",
+      "date": "2026-01-18",
+      "weight": 185.8,
+      "workout": {
+        "completed": false,
+        "exercises": []
+      },
+      "meals": {
+        "breakfast": 400,
+        "lunch": 550,
+        "dinner": 620,
+        "snacks": null
+      }
+    },
+    {
+      "id": "checkin-2026-01-17",
+      "date": "2026-01-17",
+      "weight": null,
+      "workout": {
+        "completed": true,
+        "exercises": [
+          {
+            "id": "ex-006",
+            "type": "Upper Back",
+            "sets": 4,
+            "reps": 10,
+            "weight": 135
+          },
+          {
+            "id": "ex-007",
+            "type": "Lower Back",
+            "sets": 3,
+            "reps": 12,
+            "weight": 95
+          },
+          {
+            "id": "ex-008",
+            "type": "Arms",
+            "sets": 3,
+            "reps": 12,
+            "weight": 30
+          }
+        ]
+      },
+      "meals": {
+        "breakfast": 480,
+        "lunch": 720,
+        "dinner": 650,
+        "snacks": 150
+      }
+    },
+    {
+      "id": "checkin-2026-01-16",
+      "date": "2026-01-16",
+      "weight": 186.0,
+      "workout": {
+        "completed": true,
+        "exercises": [
+          {
+            "id": "ex-009",
+            "type": "Cardio",
+            "time": 30,
+            "distance": 3.2
+          }
+        ]
+      },
+      "meals": {
+        "breakfast": 350,
+        "lunch": 600,
+        "dinner": 580,
+        "snacks": 100
+      }
+    },
+    {
+      "id": "checkin-2026-01-15",
+      "date": "2026-01-15",
+      "weight": 186.2,
+      "workout": {
+        "completed": true,
+        "exercises": [
+          {
+            "id": "ex-010",
+            "type": "Chest",
+            "sets": 4,
+            "reps": 10,
+            "weight": 180
+          },
+          {
+            "id": "ex-011",
+            "type": "Shoulders",
+            "sets": 3,
+            "reps": 12,
+            "weight": 40
+          }
+        ]
+      },
+      "meals": {
+        "breakfast": 500,
+        "lunch": 650,
+        "dinner": 700,
+        "snacks": 250
+      }
+    },
+    {
+      "id": "checkin-2026-01-14",
+      "date": "2026-01-14",
+      "weight": null,
+      "workout": {
+        "completed": true,
+        "exercises": [
+          {
+            "id": "ex-012",
+            "type": "Walking",
+            "time": 45,
+            "distance": 2.8
+          }
+        ]
+      },
+      "meals": {
+        "breakfast": null,
+        "lunch": 580,
+        "dinner": 620,
+        "snacks": null
+      }
+    },
+    {
+      "id": "checkin-2026-01-13",
+      "date": "2026-01-13",
+      "weight": 186.5,
+      "workout": {
+        "completed": true,
+        "exercises": [
+          {
+            "id": "ex-013",
+            "type": "Legs",
+            "sets": 4,
+            "reps": 8,
+            "weight": 220
+          },
+          {
+            "id": "ex-014",
+            "type": "Core",
+            "sets": null,
+            "reps": null,
+            "weight": null
+          }
+        ]
+      },
+      "meals": {
+        "breakfast": 550,
+        "lunch": 700,
+        "dinner": 800,
+        "snacks": 180
+      }
+    }
+  ]
+}
