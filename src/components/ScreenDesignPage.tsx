@@ -253,22 +253,25 @@ export function ScreenDesignFullscreen() {
           const shellInfo = loadShellInfo()
           const specNavItems = shellInfo?.spec?.navigationItems || []
 
-          // Parse navigation items from spec (format: "**Label** → Description")
+          // Parse navigation items from spec (format: "**Label** (IconName icon) → Description")
           const navigationItems = specNavItems.length > 0
             ? specNavItems.map((item, index) => {
                 // Extract label from **Label** format
                 const labelMatch = item.match(/\*\*([^*]+)\*\*/)
                 const label = labelMatch ? labelMatch[1] : item.split('→')[0]?.trim() || `Item ${index + 1}`
+                // Derive icon key from label (e.g., "Check-In" → "check-in")
+                const icon = label.toLowerCase().replace(/\s+/g, '-')
                 return {
                   label,
-                  href: `/${label.toLowerCase().replace(/\s+/g, '-')}`,
+                  href: `/${icon}`,
+                  icon,
                   isActive: index === 0,
                 }
               })
             : [
-                { label: 'Dashboard', href: '/', isActive: true },
-                { label: 'Items', href: '/items' },
-                { label: 'Settings', href: '/settings' },
+                { label: 'Dashboard', href: '/', icon: 'dashboard', isActive: true },
+                { label: 'Items', href: '/items', icon: 'items' },
+                { label: 'Settings', href: '/settings', icon: 'settings' },
               ]
 
           const defaultUser = {

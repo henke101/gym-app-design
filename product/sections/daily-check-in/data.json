@@ -30,7 +30,7 @@
     "longestStreak": 21,
     "lastLoggedDate": "2026-01-20"
   },
-  "previousWeight": 185.2,
+  "previousWeight": 84.0,
   "dailyCheckIns": [
     {
       "id": "checkin-2026-01-20",
@@ -44,14 +44,14 @@
             "type": "Chest",
             "sets": 4,
             "reps": 10,
-            "weight": 185
+            "weight": 85
           },
           {
             "id": "ex-002",
             "type": "Shoulders",
             "sets": 3,
             "reps": 12,
-            "weight": 45
+            "weight": 20
           },
           {
             "id": "ex-003",
@@ -72,7 +72,7 @@
     {
       "id": "checkin-2026-01-19",
       "date": "2026-01-19",
-      "weight": 185.2,
+      "weight": 84.0,
       "workout": {
         "completed": true,
         "exercises": [
@@ -81,7 +81,7 @@
             "type": "Legs",
             "sets": 4,
             "reps": 8,
-            "weight": 225
+            "weight": 100
           },
           {
             "id": "ex-005",
@@ -102,7 +102,7 @@
     {
       "id": "checkin-2026-01-18",
       "date": "2026-01-18",
-      "weight": 185.8,
+      "weight": 84.3,
       "workout": {
         "completed": false,
         "exercises": []
@@ -126,21 +126,21 @@
             "type": "Upper Back",
             "sets": 4,
             "reps": 10,
-            "weight": 135
+            "weight": 60
           },
           {
             "id": "ex-007",
             "type": "Lower Back",
             "sets": 3,
             "reps": 12,
-            "weight": 95
+            "weight": 45
           },
           {
             "id": "ex-008",
             "type": "Arms",
             "sets": 3,
             "reps": 12,
-            "weight": 30
+            "weight": 15
           }
         ]
       },
@@ -154,7 +154,7 @@
     {
       "id": "checkin-2026-01-16",
       "date": "2026-01-16",
-      "weight": 186.0,
+      "weight": 84.4,
       "workout": {
         "completed": true,
         "exercises": [
@@ -162,7 +162,7 @@
             "id": "ex-009",
             "type": "Cardio",
             "time": 30,
-            "distance": 3.2
+            "distance": 5.0
           }
         ]
       },
@@ -176,7 +176,7 @@
     {
       "id": "checkin-2026-01-15",
       "date": "2026-01-15",
-      "weight": 186.2,
+      "weight": 84.5,
       "workout": {
         "completed": true,
         "exercises": [
@@ -185,14 +185,14 @@
             "type": "Chest",
             "sets": 4,
             "reps": 10,
-            "weight": 180
+            "weight": 80
           },
           {
             "id": "ex-011",
             "type": "Shoulders",
             "sets": 3,
             "reps": 12,
-            "weight": 40
+            "weight": 17.5
           }
         ]
       },
@@ -214,7 +214,7 @@
             "id": "ex-012",
             "type": "Walking",
             "time": 45,
-            "distance": 2.8
+            "distance": 4.5
           }
         ]
       },
@@ -228,7 +228,7 @@
     {
       "id": "checkin-2026-01-13",
       "date": "2026-01-13",
-      "weight": 186.5,
+      "weight": 84.6,
       "workout": {
         "completed": true,
         "exercises": [
@@ -237,7 +237,7 @@
             "type": "Legs",
             "sets": 4,
             "reps": 8,
-            "weight": 220
+            "weight": 100
           },
           {
             "id": "ex-014",
