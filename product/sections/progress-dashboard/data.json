@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "models": {
+      "dailyMetrics": "A single day's aggregated fitness data combining weight, calorie intake, and workout status. Powers the dashboard charts.",
+      "periodSummary": "Calculated statistics for a time period, including averages and comparisons to the previous period."
+    },
+    "relationships": [
+      "Daily Metrics are derived from WeightEntry, Meal, and Workout entities",
+      "Period Summary aggregates Daily Metrics for a given time range (week or month)"
+    ]
+  },
+  "dailyMetrics": [
+    { "date": "2026-01-22", "weight": 82.3, "calories": 2150, "workedOut": true },
+    { "date": "2026-01-20", "weight": 82.4, "calories": 2080, "workedOut": false },
+    { "date": "2026-01-19", "weight": 82.5, "calories": 2210, "workedOut": true },
+    { "date": "2026-01-17", "weight": 82.6, "calories": 2320, "workedOut": false },
+    { "date": "2026-01-15", "weight": 82.8, "calories": 2290, "workedOut": true },
+    { "date": "2026-01-12", "weight": 83.1, "calories": 2180, "workedOut": true },
+    { "date": "2026-01-08", "weight": 82.9, "calories": 2280, "workedOut": true },
+    { "date": "2026-01-05", "weight": 83.0, "calories": 2380, "workedOut": true },
+    { "date": "2026-01-01", "weight": 83.4, "calories": 2640, "workedOut": false },
+    { "date": "2025-12-29", "weight": 83.6, "calories": 2240, "workedOut": true },
+    { "date": "2025-12-25", "weight": 83.9, "calories": 2580, "workedOut": false }
+  ],
+  "weekSummary": {
+    "timeRange": "week",
+    "startDate": "2026-01-16",
+    "endDate": "2026-01-22",
+    "weight": {
+      "current": 82.3,
+      "average": 82.5,
+      "change": -0.3,
+      "unit": "kg"
+    },
+    "calories": {
+      "average": 2190,
+      "total": 6440,
+      "change": 85,
+      "unit": "kcal"
+    },
+    "workouts": {
+      "count": 2,
+      "total": 3,
+      "change": 0
+    }
+  },
+  "monthSummary": {
+    "timeRange": "month",
+    "startDate": "2025-12-25",
+    "endDate": "2026-01-22",
+    "weight": {
+      "current": 82.3,
+      "average": 83.0,
+      "change": -1.6,
+      "unit": "kg"
+    },
+    "calories": {
+      "average": 2302,
+      "total": 25320,
+      "change": -120,
+      "unit": "kcal"
+    },
+    "workouts": {
+      "count": 7,
+      "total": 11,
+      "change": 2
+    }
+  },
+  "selectedDayDetail": {
+    "date": "2026-01-19",
+    "weight": 82.5,
+    "calories": 2210,
+    "workout": {
+      "name": "Upper Body",
+      "exercises": 5
+    },
+    "meals": [
+      { "name": "Breakfast", "calories": 520 },
+      { "name": "Lunch", "calories": 780 },
+      { "name": "Dinner", "calories": 720 },
+      { "name": "Snacks", "calories": 190 }
+    ]
+  }
+}

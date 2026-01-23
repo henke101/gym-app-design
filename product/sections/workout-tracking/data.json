@@ -1,0 +1,210 @@
+{
+  "_meta": {
+    "models": {
+      "workout": "A training session on a specific date. Contains the exercises performed during that session.",
+      "exercise": "A specific movement performed within a workout, including sets, reps, and weight used.",
+      "exerciseProgress": "Aggregated progress data for an exercise type, showing weight and volume trends over the selected date range."
+    },
+    "relationships": [
+      "Each Workout contains one or more Exercises",
+      "Exercise Progress is calculated from all Exercises of that type within the date range"
+    ]
+  },
+  "workouts": [
+    {
+      "id": "w-007",
+      "date": "2026-01-22",
+      "name": "Upper Body",
+      "exercises": [
+        { "id": "e-019", "type": "Chest", "sets": 4, "reps": 8, "weight": 72.5 },
+        { "id": "e-020", "type": "Shoulders", "sets": 3, "reps": 12, "weight": 20 },
+        { "id": "e-021", "type": "Arms", "sets": 3, "reps": 10, "weight": 14 }
+      ]
+    },
+    {
+      "id": "w-006",
+      "date": "2026-01-19",
+      "name": "Lower Body",
+      "exercises": [
+        { "id": "e-016", "type": "Legs", "sets": 4, "reps": 8, "weight": 95 },
+        { "id": "e-017", "type": "Core", "sets": 3, "reps": 15, "weight": 10 },
+        { "id": "e-018", "type": "Lower Back", "sets": 3, "reps": 12, "weight": 45 }
+      ]
+    },
+    {
+      "id": "w-005",
+      "date": "2026-01-15",
+      "name": "Pull Day",
+      "exercises": [
+        { "id": "e-013", "type": "Upper Back", "sets": 4, "reps": 10, "weight": 65 },
+        { "id": "e-014", "type": "Lower Back", "sets": 3, "reps": 12, "weight": 42.5 },
+        { "id": "e-015", "type": "Arms", "sets": 3, "reps": 10, "weight": 12 }
+      ]
+    },
+    {
+      "id": "w-004",
+      "date": "2026-01-12",
+      "name": "Push Day",
+      "exercises": [
+        { "id": "e-010", "type": "Chest", "sets": 4, "reps": 8, "weight": 70 },
+        { "id": "e-011", "type": "Shoulders", "sets": 3, "reps": 12, "weight": 17.5 },
+        { "id": "e-012", "type": "Arms", "sets": 3, "reps": 10, "weight": 12 }
+      ]
+    },
+    {
+      "id": "w-003",
+      "date": "2026-01-08",
+      "name": "Lower Body",
+      "exercises": [
+        { "id": "e-007", "type": "Legs", "sets": 4, "reps": 8, "weight": 90 },
+        { "id": "e-008", "type": "Core", "sets": 3, "reps": 15, "weight": 7.5 },
+        { "id": "e-009", "type": "Lower Back", "sets": 3, "reps": 12, "weight": 40 }
+      ]
+    },
+    {
+      "id": "w-002",
+      "date": "2026-01-05",
+      "name": "Upper Body",
+      "exercises": [
+        { "id": "e-004", "type": "Chest", "sets": 4, "reps": 8, "weight": 67.5 },
+        { "id": "e-005", "type": "Upper Back", "sets": 4, "reps": 10, "weight": 62.5 },
+        { "id": "e-006", "type": "Shoulders", "sets": 3, "reps": 12, "weight": 15 }
+      ]
+    },
+    {
+      "id": "w-001",
+      "date": "2025-12-29",
+      "name": "Full Body",
+      "exercises": [
+        { "id": "e-001", "type": "Chest", "sets": 3, "reps": 8, "weight": 65 },
+        { "id": "e-002", "type": "Legs", "sets": 3, "reps": 10, "weight": 85 },
+        { "id": "e-003", "type": "Core", "sets": 3, "reps": 12, "weight": 5 }
+      ]
+    }
+  ],
+  "exerciseProgress": [
+    {
+      "type": "Chest",
+      "weightTrend": [
+        { "date": "2025-12-29", "weight": 65 },
+        { "date": "2026-01-05", "weight": 67.5 },
+        { "date": "2026-01-12", "weight": 70 },
+        { "date": "2026-01-22", "weight": 72.5 }
+      ],
+      "volumeTrend": [
+        { "date": "2025-12-29", "volume": 1560 },
+        { "date": "2026-01-05", "volume": 2160 },
+        { "date": "2026-01-12", "volume": 2240 },
+        { "date": "2026-01-22", "volume": 2320 }
+      ],
+      "latestWeight": 72.5,
+      "weightChange": 7.5,
+      "latestVolume": 2320,
+      "volumeChange": 760
+    },
+    {
+      "type": "Legs",
+      "weightTrend": [
+        { "date": "2025-12-29", "weight": 85 },
+        { "date": "2026-01-08", "weight": 90 },
+        { "date": "2026-01-19", "weight": 95 }
+      ],
+      "volumeTrend": [
+        { "date": "2025-12-29", "volume": 2550 },
+        { "date": "2026-01-08", "volume": 2880 },
+        { "date": "2026-01-19", "volume": 3040 }
+      ],
+      "latestWeight": 95,
+      "weightChange": 10,
+      "latestVolume": 3040,
+      "volumeChange": 490
+    },
+    {
+      "type": "Upper Back",
+      "weightTrend": [
+        { "date": "2026-01-05", "weight": 62.5 },
+        { "date": "2026-01-15", "weight": 65 }
+      ],
+      "volumeTrend": [
+        { "date": "2026-01-05", "volume": 2500 },
+        { "date": "2026-01-15", "volume": 2600 }
+      ],
+      "latestWeight": 65,
+      "weightChange": 2.5,
+      "latestVolume": 2600,
+      "volumeChange": 100
+    },
+    {
+      "type": "Lower Back",
+      "weightTrend": [
+        { "date": "2026-01-08", "weight": 40 },
+        { "date": "2026-01-15", "weight": 42.5 },
+        { "date": "2026-01-19", "weight": 45 }
+      ],
+      "volumeTrend": [
+        { "date": "2026-01-08", "volume": 1440 },
+        { "date": "2026-01-15", "volume": 1530 },
+        { "date": "2026-01-19", "volume": 1620 }
+      ],
+      "latestWeight": 45,
+      "weightChange": 5,
+      "latestVolume": 1620,
+      "volumeChange": 180
+    },
+    {
+      "type": "Shoulders",
+      "weightTrend": [
+        { "date": "2026-01-05", "weight": 15 },
+        { "date": "2026-01-12", "weight": 17.5 },
+        { "date": "2026-01-22", "weight": 20 }
+      ],
+      "volumeTrend": [
+        { "date": "2026-01-05", "volume": 540 },
+        { "date": "2026-01-12", "volume": 630 },
+        { "date": "2026-01-22", "volume": 720 }
+      ],
+      "latestWeight": 20,
+      "weightChange": 5,
+      "latestVolume": 720,
+      "volumeChange": 180
+    },
+    {
+      "type": "Arms",
+      "weightTrend": [
+        { "date": "2026-01-12", "weight": 12 },
+        { "date": "2026-01-15", "weight": 12 },
+        { "date": "2026-01-22", "weight": 14 }
+      ],
+      "volumeTrend": [
+        { "date": "2026-01-12", "volume": 360 },
+        { "date": "2026-01-15", "volume": 360 },
+        { "date": "2026-01-22", "volume": 420 }
+      ],
+      "latestWeight": 14,
+      "weightChange": 2,
+      "latestVolume": 420,
+      "volumeChange": 60
+    },
+    {
+      "type": "Core",
+      "weightTrend": [
+        { "date": "2025-12-29", "weight": 5 },
+        { "date": "2026-01-08", "weight": 7.5 },
+        { "date": "2026-01-19", "weight": 10 }
+      ],
+      "volumeTrend": [
+        { "date": "2025-12-29", "volume": 180 },
+        { "date": "2026-01-08", "volume": 337.5 },
+        { "date": "2026-01-19", "volume": 450 }
+      ],
+      "latestWeight": 10,
+      "weightChange": 5,
+      "latestVolume": 450,
+      "volumeChange": 270
+    }
+  ],
+  "dateRange": {
+    "startDate": "2025-12-25",
+    "endDate": "2026-01-22"
+  }
+}
